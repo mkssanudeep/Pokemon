@@ -9,6 +9,9 @@ public class Fighter : MonoBehaviour
         HUMAN, AI
     };
 
+    public float horizontalForce;
+    public float verticalForce;
+
     public static float MAX_HEALTH = 100f;
 
     public float health = MAX_HEALTH;
@@ -21,7 +24,7 @@ public class Fighter : MonoBehaviour
     public PlayerType player;
     public FighterState currentState = FighterState.IDLE;
     protected Animator animator;
-    private Rigidbody myBody; 
+    public Rigidbody myBody; 
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +68,7 @@ public class Fighter : MonoBehaviour
             animator.SetBool("idle", false);
 
             animator.SetBool("right", true);
+            myBody.AddForce(horizontalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
@@ -77,6 +81,7 @@ public class Fighter : MonoBehaviour
             animator.SetBool("idle", false);
 
             animator.SetBool("left", true);
+            myBody.AddForce(-horizontalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {

@@ -33,5 +33,9 @@ public class BattleController : MonoBehaviour
             roundTime--;
             lastTimeUpdate = Time.time;
         }
+        if(roundTime == 0)
+        {
+            banner.showGameEnd();
+        }
     }
 }

@@ -24,7 +24,9 @@ public class FighterStateBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        fighter.body.AddForce(new Vector3(-horizontalForce, 0, 0));
-
+        fighter.body.AddRelativeForce(new Vector3(horizontalForce, horizontalForce, horizontalForce));
+        fighter.body.AddForce(new Vector3(horizontalForce, horizontalForce, horizontalForce));
+        fighter.GetComponent<Rigidbody>().AddForce(horizontalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        Debug.Log("Key pressed");
     }
 }

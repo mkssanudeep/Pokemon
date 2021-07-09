@@ -78,7 +78,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: left
+    m_ConditionEvent: right
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1433758634692885029}
@@ -125,7 +125,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: right
+    m_ConditionEvent: left
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5555909562805547190}
@@ -150,7 +150,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: right
+    m_ConditionEvent: left
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: idle
@@ -236,7 +236,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: left
+    m_ConditionEvent: right
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: idle
@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorState: 1
-  horizontalForce: 500
-  verticalForce: 0
+  horizontalForce: 1000
+  verticalForce: 500
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

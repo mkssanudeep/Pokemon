@@ -29,7 +29,7 @@ public class BannerController : MonoBehaviour
     public void showFight()
     {
         animating = true;
-        //animator.SetTrigger("ShowFight");
+        animator.SetTrigger("ShowFight");
     }
 
     public void showGameEnd()
